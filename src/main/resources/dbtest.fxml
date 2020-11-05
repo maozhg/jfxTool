@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="623.0" prefWidth="992.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.mz.controller.DBController">
+   <children>
+      <Pane fx:id="pane" prefHeight="623.0" prefWidth="992.0">
+         <children>
+            <TextField fx:id="url" layoutX="114.0" layoutY="54.0" prefHeight="23.0" prefWidth="317.0" text="localhost" />
+            <TextField fx:id="username" layoutX="114.0" layoutY="94.0" prefHeight="23.0" prefWidth="317.0" text="root" />
+            <TextField fx:id="password" layoutX="114.0" layoutY="135.0" prefHeight="23.0" prefWidth="317.0" text="root" />
+            <TextField fx:id="port" layoutX="114.0" layoutY="180.0" prefHeight="23.0" prefWidth="317.0" text="3307" />
+            <Label layoutX="71.0" layoutY="58.0" text="url" />
+            <Label layoutX="32.0" layoutY="96.0" text="username" />
+            <Label layoutX="33.0" layoutY="137.0" text="password" />
+            <Label layoutX="62.0" layoutY="181.0" text="port" />
+            <Button fx:id="connect" layoutX="61.0" layoutY="241.0" mnemonicParsing="false" onMouseClicked="#connectDb" prefHeight="23.0" prefWidth="80.0" text="连接" />
+            <Button fx:id="disconnect" layoutX="203.0" layoutY="241.0" mnemonicParsing="false" onMouseClicked="#disConnectDb" prefHeight="23.0" prefWidth="80.0" text="断开" />
+            <Button fx:id="runsql" layoutX="682.0" layoutY="230.0" mnemonicParsing="false" onMouseClicked="#runSql" text="执行" />
+            <TextArea fx:id="sqltext" layoutX="535.0" layoutY="51.0" prefHeight="153.0" prefWidth="334.0" />
+            <TabPane layoutX="32.0" layoutY="286.0" prefHeight="315.0" prefWidth="912.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="日志">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextArea fx:id="display" layoutY="24.0" prefHeight="254.0" prefWidth="912.0" />
+                              <Button fx:id="clean" layoutX="865.0" layoutY="3.0" mnemonicParsing="false" onMouseClicked="#cleanText" text="清空" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab fx:id="result" text="结果">
+                  <content>
+                    <AnchorPane fx:id="tablerest" minHeight="0.0" minWidth="0.0" prefHeight="219.0" prefWidth="912.0" />
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

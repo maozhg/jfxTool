@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="pane" prefHeight="564.0" prefWidth="831.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.mz.controller.ChartController">
+   <children>
+      <ProgressBar fx:id="progressbar" layoutX="187.0" layoutY="55.0" prefHeight="18.0" prefWidth="443.0" progress="0.12" />
+      <Button fx:id="startButton" layoutX="346.0" layoutY="190.0" mnemonicParsing="false" onMouseClicked="#start" prefHeight="23.0" prefWidth="99.0" text="开始" />
+      <ProgressIndicator fx:id="proindicator" layoutX="672.0" layoutY="53.0" progress="0.0" />
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</AnchorPane>
